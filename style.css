@@ -647,3 +647,378 @@ h1, h2, h3 {
     z-index: -1;
 }
 
+
+
+
+/* ==============================================================
+   10. RESPONSIVE DESIGN - TABLETS & MOBILE
+   ============================================================== */
+
+/* ------------------------------
+   TABLETS (901px - 1200px)
+   ------------------------------ */
+@media (min-width: 901px) and (max-width: 1200px) {
+
+    /* Main profile and interest sections */
+    .profile-nav,
+    .profile-content-container,
+    .byf,
+    .dnfi,
+    .interests-title,
+    .music-interests,
+    .streamer-youtube-interests,
+    .game-interests,
+    .movie-tv-interests,
+    .logos-link {
+        width: 70%;
+    }
+
+    /* Navigation */
+    .profile-nav {
+        gap: 20px;
+    }
+
+    /* Music section */
+    .music-players-container {
+        width: 95%;
+    }
+
+    .music-players {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .song-player {
+        gap: 10px;
+        padding: 8px;
+    }
+
+    .song-player img {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+
+/* ------------------------------
+   SMALL TABLETS (601px - 900px)
+   ------------------------------ */
+@media (min-width: 601px) and (max-width: 900px) {
+
+    /* Header GIFs */
+    .gifs {
+        gap: 12px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .shinee-gif,
+    .core-gif,
+    .britney-gif {
+        width: 25%;
+        max-width: 25%;
+    }
+
+    /* Main sections */
+    .profile-nav,
+    .profile-content-container,
+    .byf,
+    .dnfi,
+    .interests-title,
+    .music-interests,
+    .streamer-youtube-interests,
+    .game-interests,
+    .movie-tv-interests,
+    .logos-link {
+        width: 85%;
+    }
+
+    /* Navigation */
+    .profile-nav {
+        gap: 20px;
+    }
+
+    /* Profile information */
+    .profile-content-container {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    /* Social links */
+    .logos-link {
+        gap: 25px;
+    }
+
+    /* Music section */
+    .music-players-container {
+        width: 95%;
+    }
+
+    .music-players-container::before {
+        left: 15px;
+        right: 15px;
+    }
+
+    .music-players {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 90%;
+    }
+
+    .song-player {
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .song-player img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+/* ------------------------------
+   PHONES (600px and below)
+   ------------------------------ */
+@media (max-width: 600px) {
+
+    /* Prevent oversized elements */
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Header GIFs */
+    .gifs {
+        gap: 8px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+
+    .shinee-gif,
+    .core-gif,
+    .britney-gif {
+        width: 30%;
+        max-width: 30%;
+        height: auto;
+    }
+
+    /* Navigation */
+    .profile-nav {
+        width: 94%;
+        height: auto;
+        min-height: 65px;
+        gap: 10px;
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .profile-nav p {
+        font-size: 15px;
+        padding: 0;
+        margin: 5px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links li a {
+        font-size: 14px;
+    }
+
+    .twitter-logo-link img {
+        height: 20px;
+    }
+
+    /* Profile details */
+    .profile-content-container {
+        width: 94%;
+        flex-wrap: wrap;
+        gap: 8px 15px;
+        padding: 10px;
+    }
+
+    .profile-content-container p {
+        font-size: 14px;
+        margin: 4px 0;
+    }
+
+    /* Before You Follow / Do Not Follow If */
+    .byf,
+    .dnfi {
+        width: 94%;
+        padding: 10px;
+    }
+
+    .byf h2,
+    .dnfi h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .byf p,
+    .dnfi p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* Interests title */
+    .interests-title {
+        width: 94%;
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    /* All interests sections */
+    .music-interests,
+    .streamer-youtube-interests,
+    .game-interests,
+    .movie-tv-interests {
+        width: 94%;
+        padding: 10px;
+    }
+
+    .music-interests h3,
+    .streamer-youtube-interests h3,
+    .game-interests h3,
+    .movie-tv-interests h3 {
+        font-size: 18px;
+    }
+
+    .music-interests p,
+    .streamer-youtube-interests p,
+    .game-interests p,
+    .movie-tv-interests p {
+        font-size: 14px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+    /* Keep decorative emotes from becoming oversized */
+    .movie-tv-interests .minho.emote {
+        width: 100px;
+        max-width: 35%;
+    }
+
+    /* Social media logos */
+    .logos-link {
+        width: 94%;
+        gap: 15px;
+        padding: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    .Letterboxd-logo-link,
+    .Simkl-logo-link,
+    .Spotify-logo-link {
+        width: 75px;
+    }
+
+    /* Yellow favorite songs container */
+    .music-players-container {
+        width: 100%;
+        max-width: none;
+        padding: 15px 0;
+        margin: 15px auto;
+    }
+
+    .music-players-container::before {
+        left: 10px;
+        right: 10px;
+    }
+
+    /* Favorite songs heading */
+    .music-heading {
+        width: 90%;
+        max-width: none;
+        margin-bottom: 12px;
+    }
+
+    .music-heading h2 {
+        font-size: 18px;
+    }
+
+    /* Stack song cards vertically */
+    .music-players {
+        grid-template-columns: 1fr;
+        width: calc(100% - 50px);
+        max-width: none;
+        gap: 10px;
+    }
+
+    /* Individual song cards */
+    .song-player {
+        width: 100%;
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .song-player img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .song-info {
+        min-width: 0;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .song-player p {
+        font-size: 14px;
+    }
+
+    .song-player a {
+        font-size: 13px;
+    }
+
+    .song-actions {
+        justify-content: flex-start;
+    }
+}
+
+
+/* ------------------------------
+   VERY SMALL PHONES (375px and below)
+   ------------------------------ */
+@media (max-width: 375px) {
+
+    /* Navigation */
+    .profile-nav {
+        gap: 8px;
+    }
+
+    .profile-nav p {
+        font-size: 14px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    /* Music cards */
+    .song-player {
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .song-player img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .song-player a {
+        font-size: 12px;
+    }
+
+    /* Social logos */
+    .Letterboxd-logo-link,
+    .Simkl-logo-link,
+    .Spotify-logo-link {
+        width: 65px;
+    }
+}
+
