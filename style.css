@@ -1021,4 +1021,278 @@ h1, h2, h3 {
         width: 65px;
     }
 }
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
 
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ==========================================
+   SMOOTH SCROLL ANIMATIONS ♡
+   ========================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cute hover effects for music cards */
+.song-player {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+@media (hover: hover) {
+  .song-player:hover {
+    transform: translateY(-4px);
+    box-shadow: 3px 4px 0 #E8A0AE;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .song-player {
+    transition: none;
+  }
+}
+
+/* ==========================================
+   THE STORY BEHIND MY LAYOUT ♡
+   ========================================== */
+
+/* Main section */
+.pfp-details {
+    width: 40%;
+    margin: 0 auto;
+    background-color: #FFF0D9;
+    border: 1px solid #4A3530;
+    color: #4A3530;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+/* Expandable header */
+.pfp-details summary {
+    background-color: #FFF0D9;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: 400;
+    list-style: none;
+    transition: background-color 0.3s ease;
+}
+
+.pfp-details summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Hover color */
+.pfp-details summary:hover {
+    background-color: #F5D9A8;
+}
+
+/* Keep title and + together */
+.pfp-details .summary-title {
+    display: block;
+}
+
+/* Plus sign */
+.pfp-details .toggle-icon::after {
+    content: "+";
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Minus sign when opened */
+.pfp-details[open] .toggle-icon::after {
+    content: "−";
+}
+
+/* Click to open underneath */
+.pfp-details .click-hint {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: #806B58;
+    margin-top: 4px;
+}
+
+/* Change hint when expanded */
+.pfp-details[open] .click-hint {
+    font-size: 0;
+}
+
+.pfp-details[open] .click-hint::after {
+    content: "click to close!";
+    font-size: 12px;
+}
+
+/* Main content - same spacing as BYF/DNFI */
+.pfp-inside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 8px;
+    border-top: 1px dashed #4A3530;
+}
+
+/* Headings */
+.pfp-inside h3 {
+    background-color: #FFF8F2;
+    color: #315B68;
+    border: 1px solid #4A3530;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 5px;
+    margin: 0;
+}
+
+/* Dashed description boxes */
+.pfp-inside p {
+    width: 100%;
+    padding: 5px;
+    border: 1px dashed #4A3530;
+    color: #4A3530;
+    font-size: 15px;
+    line-height: 1.4;
+    box-sizing: border-box;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+/* Taemin video */
+.pfp-inside video {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    max-height: 310px;
+    object-fit: contain;
+    margin: 5px auto;
+    border: 1px solid #4A3530;
+    background-color: #FFF8F2;
+}
+
+/* CORE banner */
+.pfp-inside .core-banner {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 5px auto;
+    border: 1px solid #4A3530;
+}
+
+/* Small emotes */
+.pfp-inside .cat-emote {
+    width: 55px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.pfp-inside .ada-emote {
+    width: 65px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Tablets */
+@media (max-width: 1200px) {
+    .pfp-details {
+        width: 70%;
+    }
+}
+
+@media (max-width: 900px) {
+    .pfp-details {
+        width: 85%;
+    }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+    .pfp-details {
+        width: 94%;
+    }
+
+    .pfp-inside {
+        padding: 10px;
+    }
+
+    .pfp-inside p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+/* ==========================================
+   SEND LOVE BUTTON ♡
+   ========================================== */
+
+.site-footer {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    color: #4A3530;
+    padding: 25px 15px;
+    margin-top: -30px;
+}
+
+.site-footer p {
+    font-size: 12px;
+    margin: 8px 0;
+}
+
+#send-love {
+    background-color: #F8DDE5;
+    border: 1px solid #4A3530;
+    border-radius: 20px;
+    padding: 9px 20px;
+    color: #4A3530;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+#send-love:hover {
+    background-color: #E8A0AE;
+    transform: scale(1.08);
+}
+
+#send-love:active {
+    transform: scale(0.95);
+}
+
+#love-message {
+    min-height: 18px;
+    color: #315B68;
+    font-size: 12px;
+}
+#love-total {
+    color: #315B68;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 5px;
+}
