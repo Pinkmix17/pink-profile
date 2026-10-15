@@ -552,19 +552,6 @@ h1, h2, h3 {
     flex-shrink: 0;
 }
 
-/* Play button */
-.play-btn {
-    background-color: #88D8C0;
-    color: #4A3530;
-    border: 1px solid #4A3530;
-    padding: 5px 12px;
-    margin-top: 5px;
-    cursor: pointer;
-}
-.play-btn:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
 /* Song information */
 .song-player p {
     margin: 3px 0;
@@ -577,7 +564,7 @@ h1, h2, h3 {
 /* Spotify link */
 .song-player a {
     color: #315B68;
-    font-size: 12px;
+    font-size: 14px;
     text-decoration: none;
 }
 
@@ -587,7 +574,9 @@ h1, h2, h3 {
 .song-actions {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .song-actions .play-btn {
@@ -602,6 +591,10 @@ h1, h2, h3 {
 .song-info {
     flex: 1;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
 }
 
 /* Later refinements: keep these after the original player styles */
