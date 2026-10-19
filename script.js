@@ -83,7 +83,7 @@ document.addEventListener("click", (event) => {
 
 // Supabase project information
 const supabaseURL = "https://jtamwdfsltidmjvqqegr.supabase.co";
-
+``
 // Paste your PUBLIC publishable key here
 const supabaseKey = "sb_publishable_KlJXCl2nRruHn-OEOqpacQ_lEAtwwVj";
 
@@ -95,7 +95,7 @@ const loveTotal = document.getElementById("love-total");
 // Display the lifetime total
 function showLoveTotal(total) {
     loveTotal.textContent =
-        `${Number(total).toLocaleString()} little hearts sent! ♡`;
+        `${Number(total).toLocaleString()} total hearts sent! ♡`;
 }
 
 // Load the lifetime total when the page opens
