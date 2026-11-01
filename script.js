@@ -175,3 +175,54 @@ if (loveButton && loveMessage && loveTotal) {
     loadLoveTotal();
     loveButton.addEventListener("click", sendLove);
 }
+
+/* ==========================================
+   MOBILE SHOW MORE SONGS ♡
+   ========================================== */
+
+const toggleSongsButton = document.getElementById("toggle-songs");
+const musicPlayers = document.querySelector(".music-players");
+
+if (toggleSongsButton && musicPlayers) {
+
+    toggleSongsButton.addEventListener("click", () => {
+
+        const isExpanded = musicPlayers.classList.toggle("expanded");
+
+        toggleSongsButton.textContent = isExpanded
+            ? "♡ show less songs"
+            : "♡ show more songs";
+
+        toggleSongsButton.setAttribute("aria-expanded", String(isExpanded));
+
+    });
+
+}
+
+
+/* ==========================================
+   BACK TO TOP BUTTON ♡
+   ========================================== */
+
+const backToTopButton = document.getElementById("back-to-top");
+
+// Show button after scrolling down
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 400) {
+        backToTopButton.classList.add("visible");
+    } else {
+        backToTopButton.classList.remove("visible");
+    }
+
+});
+
+// Scroll smoothly to the top when clicked
+backToTopButton.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
