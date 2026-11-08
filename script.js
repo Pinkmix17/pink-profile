@@ -6,7 +6,7 @@
 // ==========================================
 
 // Different sparkles that can appear
-const sparkleShapes = ["♡", "✧", "✦", "⋆", "♥"];
+const sparkleShapes = ["♡", "✧", "✦", "⋆", "❤︎⁠"];
 
 // Colors that match Pink's Profile
 const sparkleColors = [

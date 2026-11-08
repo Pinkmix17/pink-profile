@@ -92,6 +92,7 @@ h1, h2, h3 {
     object-fit: contain;
 
     margin: auto;
+    margin-left: 10px;
 }
 .twitter-logo-link img:hover {
     transform: scale(1.1);
@@ -1402,8 +1403,8 @@ html {
         width: 35px;
         height: 35px;
 
-        bottom: 15px;
-        right: 15px;
+        bottom: 40px;
+        right: 20px;
 
         font-size: 19px;
     }
